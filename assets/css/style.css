@@ -1,1 +1,175 @@
 @import url("normalize.css");
+.btn {
+  padding: 1rem 1.25rem;
+  width: fit-content;
+  margin: auto;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  cursor: pointer;
+}
+.btn a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.btn:hover {
+  background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
+
+.tag-new {
+  padding: 0.5rem 0.75rem;
+  background-color: #99E2D0;
+  color: #008766;
+  font-weight: 500;
+  font-size: 0.75rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #F6F6F6;
+}
+
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  margin-bottom: 5px;
+}
+.header img {
+  width: 160px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background-color: #EAEAEA;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.location h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.booking {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.25rem;
+}
+.booking h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.booking h2 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.operating {
+  background-color: white;
+  padding: 3rem 1.25rem;
+}
+.operating h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.operating .instruction {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.operating .instruction .steps {
+  display: flex;
+  gap: 1.5rem;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+}
+.operating .instruction .steps i {
+  color: #7E7E7E;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurants {
+  padding: 3rem 1.25rem;
+}
+.restaurants h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.restaurants .restaurants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.restaurants .restaurants-list .cards {
+  background-color: white;
+  border-radius: 15px;
+}
+.restaurants .restaurants-list .cards span {
+  margin-top: 1rem;
+  position: absolute;
+  right: 2.25rem;
+}
+.restaurants .restaurants-list .cards img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants .restaurants-list .cards .cards-content {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants .restaurants-list .cards .cards-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.restaurants .restaurants-list .cards .cards-content h3 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.restaurants .restaurants-list .cards .cards-content i {
+  font-size: 1.5rem;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 1.25rem 1.5rem;
+}
+.footer img {
+  filter: brightness(100);
+  width: 140px;
+}
+.footer .footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.footer .footer-nav a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
