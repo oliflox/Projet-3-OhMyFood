@@ -1,7 +1,7 @@
 @import url("normalize.css");
 .btn {
   padding: 1rem 1.25rem;
-  width: fit-content;
+  min-width: 185px;
   margin: auto;
   border: none;
   border-radius: 25px;
@@ -18,12 +18,20 @@
   background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
 .tag-new {
   padding: 0.5rem 0.75rem;
   background-color: #99E2D0;
   color: #008766;
   font-weight: 500;
   font-size: 1rem;
+  border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 
@@ -181,4 +189,78 @@ body {
   gap: 0.5rem;
 }
 
-/*# sourceMappingURL=style.css.map */
+.banner {
+  content: "";
+  background-image: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 275px;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  margin-top: -2rem;
+  padding: 2rem 1rem;
+  border-radius: 25px 25px 0 0;
+}
+.menu .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .menu-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.menu .menu-header i {
+  font-size: 1.5rem;
+  color: #101010;
+  margin-right: 1rem;
+}
+.menu .menu-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+.menu .menu-category h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+.menu .menu-category hr {
+  width: 40px;
+  height: 3px;
+  border: none;
+  background-color: #99E2D0;
+}
+.menu .menu-category .menu-item {
+  background-color: white;
+  padding: 0.75rem 1rem;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu .menu-category .menu-item .menu-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.menu .menu-category .menu-item .menu-name h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.menu .menu-category .menu-item .menu-name p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.menu .menu-category .menu-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=home.css.map */
