@@ -25,6 +25,8 @@ $spacing-xxl: 2rem;
 $spacing-xxxl: 2.5rem;
 $spacing-xxxxl: 3rem;
 
+$column-gap:100px;
+
 
 $bold: 700;
 $regular: 500;
@@ -39,10 +41,10 @@ $light: 300;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $grey;
     z-index: 1000;
-    animation: fadeOut 2s forwards;
-    animation-delay: 2s;
+    background-color: $grey;
+    animation: fadeOut 0.1s forwards;
+    animation-delay: 0.1s;
     &::after{
         content: "";
         width: 50px;
@@ -120,7 +122,7 @@ margin-bottom: $spacing-xxxl;
 .nums {
     position: absolute;
     left: 0;
-    transform: translate(-50%);
+    transform: translate(-50%, -15%);
     background-color: $purple;
     color: white;
     padding: $spacing-xs $spacing-sm;
@@ -146,7 +148,7 @@ body {
 }
 
 .header {
-
+    position: relative;
     padding: $spacing-md;
     display: flex;
     justify-content: center;
@@ -155,6 +157,14 @@ body {
     img {
         width: 160px;
 
+    }
+    .header-back-arrow{
+        position: absolute;
+        top: 50%;
+        left: $spacing-md;
+        color: $dark-grey;
+        transform: translate(0,-50%);
+        font-size: $font-lg;
     }
 }
 
@@ -288,20 +298,23 @@ body {
 }
 
 .footer {
+    display: flex;
+    flex-direction:column ;   
     background-color: $dark-grey;
     padding: $spacing-lg $spacing-xl;
+    display: flex;
+    color: white;
 
     img {
         filter: brightness(100);
         width: 140px;
     }
 
-    .footer-nav {
+    .footer-nav{
         display: flex;
         flex-direction: column;
-        gap: $spacing-sm;
+        gap: $spacing-md;
         margin-top: $spacing-md;
-
         a {
             color: white;
             font-size: $font-md;
@@ -310,10 +323,14 @@ body {
             gap: $spacing-xs;
         }
     }
+
+    
 }
 
 
 // -------------------------------------------------------------
+
+
 
 .banner {
     content: "";
@@ -400,3 +417,53 @@ body {
         }
     }
 }
+
+@media screen and (min-width: 768px){
+    
+}
+
+@media screen and (min-width: 1024px) {
+
+    .header {
+       padding: $spacing-xxl 0;
+    }
+
+    .booking{
+        h1{
+            font-size: $font-xxxl;
+        }
+    }
+
+    .operating{
+            padding: $spacing-xxxxl 10vw;  
+            .instruction{
+                flex-direction: row;
+                gap: $spacing-xl;
+                .steps{
+                    width:100%;
+                }
+            }
+    }
+
+    .restaurants{
+        padding: $spacing-xxxxl 10vw;
+        .restaurants-list{
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: $spacing-xxxxl;
+            column-gap: $column-gap;
+        }
+    }
+    .footer{
+        flex-direction: row-reverse;
+        align-items: end;
+        height: 114px;
+        padding: $spacing-xxl $spacing-xxxxl;
+        .footer-nav{
+            margin-top: 0;
+            margin-right: $spacing-xxl;
+            flex-direction: row;
+            gap: $spacing-lg;
+        }
+    }
+}
+
