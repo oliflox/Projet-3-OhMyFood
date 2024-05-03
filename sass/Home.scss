@@ -73,12 +73,15 @@ margin-bottom: $spacing-xxxl;
 
 .nums {
     position: absolute;
-    left: $spacing-md;
+    left: 0;
+    transform: translate(-50%);
     background-color: $purple;
     color: white;
     padding: $spacing-xs $spacing-sm;
     border-radius: 50%;
 }
+
+
 
 .heart-liked{
     background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%),
@@ -102,8 +105,6 @@ body {
     display: flex;
     justify-content: center;
     background-color: white;
-    box-shadow: 0px 2px 4px 0px #00000026;
-    margin-bottom: 5px;
 
     img {
         width: 160px;
@@ -160,11 +161,13 @@ body {
         margin-top: $spacing-xxl;
 
         .steps {
+            position: relative;
             display: flex;
             gap: $spacing-xl;
             box-shadow: 0px 4px 15px 0px #00000026;
             border-radius: 20px;
             padding: $spacing-xl $spacing-xxl;
+            margin-left: $spacing-md;
 
             i {
                 color: #7E7E7E;
@@ -175,6 +178,11 @@ body {
             }
         }
     }
+}
+
+.purple{
+    color: $purple !important;
+
 }
 
 .restaurants {
@@ -194,11 +202,11 @@ body {
         .cards {
             background-color: white;
             border-radius: 15px;
-
+            position: relative;
             span {
-                margin-top: $spacing-md;
                 position: absolute;
-                right: calc($spacing-md + $spacing-lg);
+                right: $spacing-md;
+                top: $spacing-md;
             }
 
             img {
@@ -316,7 +324,7 @@ body {
         .menu-item {
             background-color: white;
             padding: $spacing-sm $spacing-md;
-            box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+            box-shadow: 0px 4px 15px 0px #0000001A;
             border-radius: 15px;
             display: flex;
             justify-content: space-between;
