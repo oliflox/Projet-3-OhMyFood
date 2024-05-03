@@ -30,6 +30,52 @@ $bold: 700;
 $regular: 500;
 $light: 300;
 
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+    z-index: 1000;
+    animation: fadeOut 2s forwards;
+    animation-delay: 2s;
+    &::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+        border: 5px solid $green;
+        border-top: 5px solid $dark-green;
+        border-radius: 50%;
+        animation: loading 1s linear infinite;
+    }
+
+    @keyframes loading {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+        
+    }
+
+    @keyframes fadeOut {
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+   
+}
+
+
 .btn {
     padding: $spacing-md $spacing-lg;
     min-width: 185px;
