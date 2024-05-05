@@ -63,7 +63,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-top: 2rem;
 }
 
 .tag-new {
@@ -305,33 +305,66 @@ body {
   border: none;
   background-color: #99E2D0;
 }
-.menu .menu-category .menu-item {
+.menu .menu-category .menu-container {
   background-color: white;
-  padding: 0.75rem 1rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
 }
-.menu .menu-category .menu-item .menu-name {
+.menu .menu-category .menu-container:hover .check-container {
+  width: 5rem;
+  opacity: 100%;
+  transition-duration: 0.75s;
+}
+.menu .menu-category .menu-container:hover .check-container i {
+  animation: rotation 0.75s ease-in-out;
+}
+.menu .menu-category .menu-container .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0.75rem 1rem;
+}
+.menu .menu-category .menu-container .menu-item .menu-name {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
-.menu .menu-category .menu-item .menu-name h3 {
+.menu .menu-category .menu-container .menu-item .menu-name h3 {
   font-size: 1.25rem;
   font-weight: 700;
 }
-.menu .menu-category .menu-item .menu-name p {
+.menu .menu-category .menu-container .menu-item .menu-name p {
   font-size: 1rem;
   font-weight: 300;
 }
-.menu .menu-category .menu-item h4 {
+.menu .menu-category .menu-container .menu-item .menu-price h4 {
   font-size: 1rem;
   font-weight: 700;
 }
+.menu .menu-category .menu-container .check-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: white;
+  border-radius: 0 15px 15px 0;
+  font-size: 1.5rem;
+  height: auto;
+  width: 0;
+  opacity: 0;
+}
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (min-width: 1024px) {
   .header {
     padding: 2rem 0;
@@ -368,6 +401,13 @@ body {
     margin-right: 2rem;
     flex-direction: row;
     gap: 1.25rem;
+  }
+  .menu {
+    padding: 2rem 10vw;
+    border-radius: 25px;
+  }
+  .restaurant-index {
+    background-color: white;
   }
 }
 

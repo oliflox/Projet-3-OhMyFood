@@ -27,6 +27,7 @@ $spacing-xxxxl: 3rem;
 
 $column-gap:100px;
 
+$width-check: 5rem;
 
 $bold: 700;
 $regular: 500;
@@ -104,8 +105,8 @@ $light: 300;
 .btn-container{
     display: flex;
     justify-content: center;
-align-items: center;
-margin-bottom: $spacing-xxxl;
+    align-items: center;
+    margin-top: $spacing-xxl;
 
 }
 
@@ -383,38 +384,75 @@ body {
             border: none;
             background-color: #99E2D0;
         }
-
-        .menu-item {
+        .menu-container{
             background-color: white;
-            padding: $spacing-sm $spacing-md;
             box-shadow: 0px 4px 15px 0px #0000001A;
             border-radius: 15px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            &:hover {
+                .check-container {
+                    width: $width-check;
+                    opacity: 100%;
+                    transition-duration: 0.75s;
+                    i{
+                        animation: rotation 0.75s ease-in-out;
+                    }
+                }
 
-            .menu-name {
+            }
+            .menu-item {
                 display: flex;
-                flex-direction: column;
-                gap: $spacing-xxs;
-
-                h3 {
-                    font-size: $font-lg;
-                    font-weight: $bold;
+                justify-content: space-between;
+                align-items: flex-end;
+                width: 100%;
+                padding: $spacing-sm $spacing-md; 
+                .menu-name {
+                    display: flex;
+                    flex-direction: column;
+                    gap: $spacing-xxs;
+                    
+                    
+                    h3 {
+                        font-size: $font-lg;
+                        font-weight: $bold;
+                    }
+    
+                    p {
+                        font-size: $font-md;
+                        font-weight: $light;
+                    }
                 }
-
-                p {
-                    font-size: $font-md;
-                    font-weight: $light;
+                .menu-price{
+                    h4 {
+                        font-size: $font-md;
+                        font-weight: $bold;
+                    }
                 }
             }
-
-            h4 {
-                font-size: $font-md;
-                font-weight: $bold;
+            .check-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $green;
+                color: white;
+                border-radius: 0 15px 15px 0;
+                font-size: $font-xl;
+                height: auto;
+                width: 0;
+                opacity: 0;
             }
-
+            
         }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -464,6 +502,15 @@ body {
             flex-direction: row;
             gap: $spacing-lg;
         }
+    }
+
+    .menu{
+        padding: $spacing-xxl 10vw;
+        border-radius: 25px;
+    }
+
+    .restaurant-index{
+        background-color: white;
     }
 }
 
