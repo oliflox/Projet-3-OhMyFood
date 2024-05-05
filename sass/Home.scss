@@ -28,6 +28,7 @@ $spacing-xxxxl: 3rem;
 $column-gap:100px;
 
 $width-check: 5rem;
+$delay: 0.5s;
 
 $bold: 700;
 $regular: 500;
@@ -384,12 +385,22 @@ body {
             border: none;
             background-color: #99E2D0;
         }
+        & > * {
+            animation: FadeIn 0.5s ease-in-out;
+            
+            @for $i from 1 through 4{
+                &:nth-child(#{$i}) {
+                    animation-delay: $delay * $i;
+                }
+            }
+        } 
         .menu-container{
             background-color: white;
             box-shadow: 0px 4px 15px 0px #0000001A;
             border-radius: 15px;
             display: flex;
             justify-content: space-between;
+            
             &:hover {
                 .check-container {
                     width: $width-check;
@@ -407,12 +418,14 @@ body {
                 align-items: flex-end;
                 width: 100%;
                 padding: $spacing-sm $spacing-md; 
+                
                 .menu-name {
                     display: flex;
                     flex-direction: column;
                     gap: $spacing-xxs;
-                    
-                    
+                    overflow: hidden;
+                    white-space: nowrap;   
+                     
                     h3 {
                         font-size: $font-lg;
                         font-weight: $bold;
@@ -453,6 +466,17 @@ body {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes FadeIn {
+    0% {
+        transform: translatey(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1;
     }
 }
 
