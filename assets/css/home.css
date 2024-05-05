@@ -312,16 +312,16 @@ body {
   animation: FadeIn 0.5s ease-in-out;
 }
 .menu .menu-category > *:nth-child(1) {
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
 }
 .menu .menu-category > *:nth-child(2) {
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 .menu .menu-category > *:nth-child(3) {
-  animation-delay: 1.5s;
+  animation-delay: 0.75s;
 }
 .menu .menu-category > *:nth-child(4) {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .menu .menu-category .menu-container {
   background-color: white;
