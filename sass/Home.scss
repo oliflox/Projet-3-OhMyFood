@@ -335,15 +335,19 @@ body {
 
 
 .banner {
-    content: "";
-    background-image: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 275px;
+    position: relative;
+    z-index: 1;
+    img{
+        height: 275px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
 }
 
 .menu {
+    position: relative;
+    z-index: 2;
     background-color: #F6F6F6;
     margin-top: -$spacing-xxl;
     padding: $spacing-xxl $spacing-md;
@@ -529,8 +533,12 @@ body {
     }
 
     .menu{
-        padding: $spacing-xxl 10vw;
-        border-radius: 25px;
+        margin: -$spacing-xxxl 10vw 0 10vw;
+        padding: $spacing-xxl 10%;
+        .menu-header{
+            justify-content: center;
+            gap: $spacing-xl;
+        }
     }
 
     .restaurant-index{
