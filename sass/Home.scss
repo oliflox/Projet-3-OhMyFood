@@ -45,8 +45,8 @@ $light: 300;
     align-items: center;
     z-index: 1000;
     background-color: $grey;
-    animation: fadeOut 0.1s forwards;
-    animation-delay: 0.1s;
+    animation: fadeOut 2s forwards;
+    animation-delay: 2s;
 
     &::after {
         content: "";
