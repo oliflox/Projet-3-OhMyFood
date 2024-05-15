@@ -309,19 +309,19 @@ body {
   background-color: #99E2D0;
 }
 .menu .menu-category > * {
-  animation: FadeIn 0.5s ease-in-out;
+  animation: FadeIn 0.75s ease-in-out;
 }
 .menu .menu-category > *:nth-child(1) {
-  animation-delay: 0.25s;
-}
-.menu .menu-category > *:nth-child(2) {
   animation-delay: 0.5s;
 }
+.menu .menu-category > *:nth-child(2) {
+  animation-delay: 1s;
+}
 .menu .menu-category > *:nth-child(3) {
-  animation-delay: 0.75s;
+  animation-delay: 1.5s;
 }
 .menu .menu-category > *:nth-child(4) {
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .menu .menu-category .menu-container {
   background-color: white;
@@ -339,32 +339,38 @@ body {
   animation: rotation 0.75s ease-in-out;
 }
 .menu .menu-category .menu-container .menu-item {
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   width: 100%;
-  padding: 0.75rem 1rem;
+  gap: 1rem;
+  overflow: clip;
 }
-.menu .menu-category .menu-container .menu-item .menu-name {
+.menu .menu-category .menu-container .menu-container-name {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
   overflow: hidden;
   white-space: nowrap;
 }
-.menu .menu-category .menu-container .menu-item .menu-name h3 {
+.menu .menu-category .menu-container .menu-container-name h3 {
   font-size: 1.25rem;
   font-weight: 700;
 }
-.menu .menu-category .menu-container .menu-item .menu-name p {
+.menu .menu-category .menu-container .menu-container-name p {
   font-size: 1rem;
   font-weight: 300;
 }
-.menu .menu-category .menu-container .menu-item .menu-price h4 {
+.menu .menu-category .menu-container .menu-price h4 {
   font-size: 1rem;
   font-weight: 700;
 }
-.menu .menu-category .menu-container .check-container {
+.menu .menu-category .menu-container h4 {
+  align-self: flex-end;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.menu .menu-category .check-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,8 +397,8 @@ body {
     opacity: 0;
   }
   100% {
-    transform: translatey(0);
     opacity: 1;
+    transform: translatey(0);
   }
 }
 @media screen and (min-width: 1024px) {

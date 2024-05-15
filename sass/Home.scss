@@ -398,11 +398,11 @@ body {
         }
 
         &>* {
-            animation: FadeIn 0.5s ease-in-out;
+            animation: FadeIn 0.75s ease-in-out;
 
             @for $i from 1 through 4 {
                 &:nth-child(#{$i}) {
-                    animation-delay: $delay * $i/2;
+                    animation-delay: $delay * $i;
                 }
             }
         }
@@ -413,7 +413,7 @@ body {
             border-radius: 15px;
             display: flex;
             justify-content: space-between;
-
+            
             &:hover {
                 .check-container {
                     width: $width-check;
@@ -426,15 +426,18 @@ body {
                 }
 
             }
-
-            .menu-item {
+            .menu-item{
+                padding: $spacing-sm $spacing-md;
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-end;
                 width: 100%;
-                padding: $spacing-sm $spacing-md;
+                
+                gap: $spacing-md;
+                overflow: clip;
 
-                .menu-name {
+            }
+
+                .menu-container-name {
                     display: flex;
                     flex-direction: column;
                     gap: $spacing-xxs;
@@ -458,6 +461,13 @@ body {
                         font-weight: $bold;
                     }
                 }
+                    h4{
+                        align-self: flex-end;
+                        font-size: $font-md;
+                        font-weight: $bold;
+                    
+                    }
+                
             }
 
             .check-container {
@@ -472,10 +482,8 @@ body {
                 width: 0;
                 opacity: 0;
             }
-
         }
     }
-}
 
 @keyframes rotation {
     0% {
@@ -494,8 +502,8 @@ body {
     }
 
     100% {
-        transform: translatey(0);
         opacity: 1;
+        transform: translatey(0);
     }
 }
 
