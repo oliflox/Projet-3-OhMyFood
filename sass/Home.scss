@@ -27,7 +27,7 @@ $spacing-xxxxl: 3rem;
 
 $column-gap: 100px;
 
-$width-check: 5rem;
+$width-check: 6rem;
 $delay: 0.5s;
 
 $bold: 700;
@@ -143,6 +143,11 @@ $light: 300;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     height: 0;
+    z-index: 1;
+}
+
+.heart-unlike{
+    z-index: 2;
 }
 
 .heart-container {
@@ -156,17 +161,15 @@ $light: 300;
         top: 0;
         left: 0;
     }
+
     &:hover {
         .heart-liked {
-            transition: all 1s ease-in-out;
-            height: 30px;
-        }
-        .heart-unlike{
-            transition-duration: 1s ;
-            opacity: 0; 
+            transition: all 0.7s ease-in-out;
+            height: 24px; 
         }
     }
 }
+
 
 body {
     font-family: "Roboto", sans-serif;
@@ -414,7 +417,7 @@ body {
             opacity: 0;
             @for $i from 1 through 4 {
                 &:nth-child(#{$i}) {
-                    animation-delay: $delay * $i/2;
+                    animation-delay: $delay * calc($i/2); 
                 }
             }
         }
@@ -427,18 +430,18 @@ body {
             justify-content: space-between;
 
             .menu-item {
-                padding: $spacing-sm $spacing-md;
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
-                gap: $spacing-md;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                
             }
 
             .menu-name {
+                margin:$spacing-sm $spacing-md;
                 width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 h3, p {
                     white-space: nowrap;
                     overflow: hidden;
@@ -459,6 +462,8 @@ body {
                 align-self: flex-end;
                 font-size: $font-md;
                 font-weight: $bold;
+                margin-bottom: $spacing-sm;
+                margin-right: $spacing-md;
             }
 
             &:hover {
@@ -511,7 +516,9 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    
+}
 
 @media screen and (min-width: 1024px) {
     .header {

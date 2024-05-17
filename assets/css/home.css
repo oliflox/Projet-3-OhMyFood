@@ -97,6 +97,11 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   height: 0;
+  z-index: 1;
+}
+
+.heart-unlike {
+  z-index: 2;
 }
 
 .heart-container {
@@ -111,12 +116,8 @@
   left: 0;
 }
 .heart-container:hover .heart-liked {
-  transition: all 1s ease-in-out;
-  height: 30px;
-}
-.heart-container:hover .heart-unlike {
-  transition-duration: 1s;
-  opacity: 0;
+  transition: all 0.7s ease-in-out;
+  height: 24px;
 }
 
 body {
@@ -352,17 +353,16 @@ body {
   justify-content: space-between;
 }
 .menu .menu-category .menu-container .menu-item {
-  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 1rem;
+}
+.menu .menu-category .menu-container .menu-name {
+  margin: 0.75rem 1rem;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.menu .menu-category .menu-container .menu-name {
-  width: 100%;
 }
 .menu .menu-category .menu-container .menu-name h3, .menu .menu-category .menu-container .menu-name p {
   white-space: nowrap;
@@ -381,9 +381,11 @@ body {
   align-self: flex-end;
   font-size: 1rem;
   font-weight: 700;
+  margin-bottom: 0.75rem;
+  margin-right: 1rem;
 }
 .menu .menu-category .menu-container:hover .check-container {
-  width: 5rem;
+  width: 6rem;
   opacity: 100%;
   transition-duration: 0.75s;
 }
