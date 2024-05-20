@@ -142,12 +142,21 @@ $light: 300;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    height: 0;
+    height: 0px;
     z-index: 1;
 }
 
 .heart-unlike{
     z-index: 2;
+}
+
+@keyframes heartAnimation {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 24px;
+    }
 }
 
 .heart-container {
@@ -164,8 +173,7 @@ $light: 300;
 
     &:hover {
         .heart-liked {
-            transition: all 0.7s ease-in-out;
-            height: 24px; 
+            animation: heartAnimation 0.7s ease-in-out forwards;
         }
     }
 }
@@ -516,9 +524,6 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) {
-    
-}
 
 @media screen and (min-width: 1024px) {
     .header {

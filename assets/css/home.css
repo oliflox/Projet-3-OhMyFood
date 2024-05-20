@@ -96,7 +96,7 @@
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  height: 0;
+  height: 0px;
   z-index: 1;
 }
 
@@ -104,6 +104,14 @@
   z-index: 2;
 }
 
+@keyframes heartAnimation {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 24px;
+  }
+}
 .heart-container {
   position: relative;
   height: 24px;
@@ -112,12 +120,11 @@
 }
 .heart-container .menu-like {
   position: absolute;
-  top: 0;
+  to: 0;
   left: 0;
 }
 .heart-container:hover .heart-liked {
-  transition: all 0.7s ease-in-out;
-  height: 24px;
+  animation: heartAnimation 0.7s ease-in-out forwards;
 }
 
 body {
