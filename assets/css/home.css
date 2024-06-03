@@ -120,7 +120,7 @@
 }
 .heart-container .menu-like {
   position: absolute;
-  to: 0;
+  top: 0;
   left: 0;
 }
 .heart-container:hover .heart-liked {
