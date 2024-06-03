@@ -1,0 +1,14 @@
+{
+  "name": "projet-n-3",
+  "version": "1.0.0",
+  "description": "Florian_COLLARD_3_ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.4"
+  }
+}
