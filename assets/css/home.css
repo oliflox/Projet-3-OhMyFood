@@ -10,8 +10,8 @@
   align-items: center;
   z-index: 1000;
   background-color: #eaeaea;
-  animation: fadeOut 2s forwards;
-  animation-delay: 2s;
+  animation: fadeOut 1s forwards;
+  animation-delay: 1s;
 }
 .loader::after {
   content: "";
@@ -20,7 +20,7 @@
   border: 5px solid #99E2D0;
   border-top: 5px solid #008766;
   border-radius: 50%;
-  animation: loading 1s linear infinite;
+  animation: loading 0.75s linear infinite;
 }
 @keyframes loading {
   0% {
