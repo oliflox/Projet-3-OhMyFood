@@ -17,7 +17,7 @@
   content: "";
   width: 50px;
   height: 50px;
-  border: 5px solid #99e2d0;
+  border: 5px solid #99E2D0;
   border-top: 5px solid #008766;
   border-radius: 50%;
   animation: loading 1s linear infinite;
@@ -49,6 +49,9 @@
   background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .btn a {
   color: white;
@@ -68,7 +71,7 @@
 
 .tag-new {
   padding: 0.5rem 0.75rem;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #008766;
   font-weight: 500;
   font-size: 1rem;
@@ -83,7 +86,7 @@
   position: absolute;
   left: 0;
   transform: translate(-50%, -15%);
-  background-color: #9356dc;
+  background-color: #9356DC;
   color: white;
   padding: 0.5rem 0.75rem;
   border-radius: 50%;
@@ -214,7 +217,7 @@ body {
 }
 
 .purple {
-  color: #9356dc !important;
+  color: #9356DC !important;
 }
 
 .restaurants {
@@ -403,7 +406,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: white;
   border-radius: 0 15px 15px 0;
   font-size: 1.5rem;
