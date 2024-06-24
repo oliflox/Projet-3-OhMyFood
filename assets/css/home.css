@@ -55,7 +55,9 @@
   text-align: center;
 }
 .btn:hover {
-  background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background: linear-gradient(0deg, #9356DC -50%, #FF79DA 130.74%);
+  transition: 0.5s;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4392156863);
 }
 
 .btn-container {
@@ -362,6 +364,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  cursor: pointer;
 }
 .menu .menu-category .menu-container .menu-name {
   margin: 0.75rem 1rem;
